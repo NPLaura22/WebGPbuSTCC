@@ -210,66 +210,41 @@
       border-radius: 50%;
     }
 
-    /*CLASSES BOTAÕ SWITCH*/
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 25px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: orange; /* Cor do botão quando no estado 'sol' */
-      -webkit-transition: .4s;
-      transition: .4s;
-      border-radius: 34px;
-    }
-
-    .slider:before { /*DESIGN BOLINHA*/
-      position: absolute;
-      content: "";
-      height: 17px;
-      width: 17px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white; /* Cor do botão quando no estado 'sol' */
-      -webkit-transition: .4s;
-      transition: .4s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: white; /* Cor do botão quando no estado 'lua' */
-    }
-
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-      background-color: orange; /* Cor do botão quando no estado 'lua' */
-    }
-    /*FIM CLASSES BOTAÕ SWITCH*/
+    
 
     /*CLASSE LEITURA VOZ*/
     .speech {
       cursor: pointer;
     }
+
+   .navbar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+    background-color: orange; /* Cor de fundo da navbar */
+    height: 100vh; /* Defina a altura conforme necessário */
+    width: 170px; /* Largura da navbar vertical */
+    position: fixed;
+    padding-top: 10px;
+    padding-left: 0px;
+    top: 0;
+}
+
+.nav-item {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s ease, colo  r 0.2s ease; /* Transições de cor | transition: propriedade duração função-de-timing atraso;*/
+}
+
+.nav-item:hover {
+    background-color: whitesmoke; /* Cor de fundo ao passar o mouse */
+    color: orange; /* Cor do texto ao passar o mouse */
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+
   </style>
 
   
@@ -285,54 +260,35 @@
       <a href="https://play.google.com/store/search?q=gpbus&c=apps&hl=pt_BR&gl=US"><i class="bi bi-google-play" style="font-size: 20px; color: white;"></i></a>
       <a href="#"><i class="bi bi-instagram" style="font-size: 20px; color: white;"></i></a>
       <a href="#"><i class="bi bi-youtube" style="font-size: 20px; color: white;"></i></a>
-
-      <label class="switch">
-          <input type="checkbox" id="modoSwitch">
-          <span class="slider"></span>
-        </label>
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark" > 
+<div class="navbar-vertical">
 
-    <div class="container-fluid">
-      <a class="img-container" href="#"><img src="img/logo2.png" width="60px"></a> <!--IMAGEM DO CANTO SUPERIOR ESQUERDO -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 grid gap-4">
-          <li class="nav-item">
-            <a class="nav-link active speech" style="color:white;  font-family: sans-serif;"  href="index.html">Início</a> <!--text-decoration: underline wavy red;-->
-          </li>
-
-          <li class="nav-item dropdown speech">
-            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;" >Cadastro Escolar</a>
-            <ul class="dropdown-menu">
-
-              <li><a class="dropdown-item" target="_blank" href="file:img/Formulario_Escolar.pdf"></i>Formulário Escolar</a></li>
-              <li><a class="dropdown-item" target="_blank" href="file:img/Atestado_de_Frequencia.pdf">Atestado de Frequência</a></li>
+    <a class="img-container" style="background-color:whitesmoke; border-radius:6px"><img src="img/logo2.png" width="60px"></a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 grid gap-4">
+              <li class="nav-item">
+                <a class="nav-link active speech" style="color:white; font-weight: bold; font-family: sans-serif; "aria-current="page" href="index.html">Início</a> 
+              </li>
+              <li class="nav-item dropdown speech">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Cadastro Escolar</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Formulario_Escolar.pdf">Formulário Escolar</a></li>
+                  <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Atestado_de_Frequencia.pdf">Atestado de Frequência</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link speech"style="color:black; font-family: sans-serif;" href="linhaHora.html">Linhas e Horários</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link speech"style="color:white; font-family: sans-serif;" target="_blank" href="img/videoTutorial.mp4">Tutorial da Plataforma</a>
+              </li>
             </ul>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link speech" style="color:black; font-family: sans-serif;  font-weight: bold;" aria-current="page" href="linhaHora.html">Linhas e Horários</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link speech" style="color:white; font-family: sans-serif;" target="_blank" href="img/videoTutorial.mp4">Tutorial da Plataforma</a>
-          </li>
-        </ul> 
-        <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3">             
-          <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3">
-            <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3">  
-              <button type="button" class="btn btn-outline-light position-relative speech "><a href="centralAjuda.html" style="color:black">Central de Ajuda </a><i class="bi bi-chat-dots-fill"></i> </button>
-            </ul>
-          </ul>
-
-        </ul>
-      </div>
-    </nav>
+</div>
+    
 
 
 
