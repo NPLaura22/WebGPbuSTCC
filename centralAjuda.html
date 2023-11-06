@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--https://maujor.com/tutorial/propriedades-css-para-estilizacao-de-textos.php#text-align-->
-    <!--https://www.blogson.com.br/como-dividir-uma-div-em-2-3-4-ou-mais-colunas/-->
-    <!--SITE QR CODE https://qr.io/dashboard/-->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -15,16 +11,9 @@
     <title>Central de Ajuda - GPbuS</title>
 
     <style type="text/css">
-        .nav-link{
-            color: white;
-        }
-
-        .nav-link:hover{
-            color: #BE2121;
-        }
 
         body {
-            /*background-image: url('img/backOnibus2.jpg');*/
+            background-image: url('img/central.jpg');
 
             background-repeat: no-repeat;
             /*display: table; /*deixa reduzido pra direita*/
@@ -32,11 +21,14 @@
             height: 100vh;
             /*padding: 50px 0; /*leva a img mais pra cima dq a nav bar*/
             background-size: cover; /*deixa a imagem do back no fundo completo AMEMMMMMMMMMM*/
+            background-color: whitesmoke;
+
         }
 
         .myContainer {
             background-color: white;
-            border-radius: 8px;     
+            opacity: 0.9;
+            border-radius: 8px;  
             padding: 20px;  
             color: white;   
             width: 80%;
@@ -153,10 +145,47 @@
           cursor: pointer;
       }
 
+      /*NAVBAR VERTICAL*/
+      .navbar-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza verticalmente */
+      background-color: orange; /* Cor de fundo da navbar */
+      height: 100vh; /* Defina a altura conforme necessário */
+      width: 170px; /* Largura da navbar vertical */
+      position: fixed;
+      padding-top: 10px;
+      padding-left: 0px;
+      top: 0;
+    }
+
+    .nav-item {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover {
+    background-color: whitesmoke;
+    color: orange; /* Alterado para vermelho ao passar o mouse */
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+.central a {
+  color: black;
+  text-decoration: none; /* Remova o sublinhado padrão do link */
+}
+
+.central:hover a {
+  color: orange;
+}
+
   </style>
 </head>
 <link rel="icon" type="text/css" href="img/contact.png">
-<body id="conteudo" style="background-color: whitesmoke;">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background: black;">
         <div class="container">
@@ -164,62 +193,42 @@
             <a href="https://play.google.com/store/search?q=gpbus&c=apps&hl=pt_BR&gl=US"><i class="bi bi-google-play" style="font-size: 20px; color: white;"></i></a>
             <a href="#"><i class="bi bi-instagram" style="font-size: 20px; color: white;"></i></a>
             <a href="#"><i class="bi bi-youtube" style="font-size: 20px; color: white;"></i></a>
-
-            <label class="switch">
-              <input type="checkbox" id="modoSwitch">
-              <span class="slider"></span>
-          </label>
       </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color:orange" > 
+ <div class="navbar-vertical">
 
-    <div class="container-fluid">
-        <a class="img-container" href="#"><img src="img/logo2.png" width="60px"></a> <!--IMAGEM DO CANTO SUPERIOR ESQUERDO -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-            </ul>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 grid gap-4">
-                <li class="nav-item">
-                    <a class="nav-link speech" style="color:black;" href="index.html">Início</a> <!--text-decoration: underline wavy red;-->
-                </li>
-                <li class="nav-item dropdown speech">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;" href="#">Cadastro Escolar</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Formulario_Escolar.pdf">Formulário Escolar</a></li>
-                        <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Atestado_de_Frequencia.pdf">Atestado de Frequência</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link speech"style="color:black; font-family: sans-serif;" href="linhaHora.html" >Linhas e Horários</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link speech"style="color:black; font-family: sans-serif;" target="_blank" href="img/videoTutorial.mp4">Tutorial da Plataforma</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3">
-              <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3 speech">  
-                  <button type="button" class="btn btn-outline-light position-relative" id="central-ajuda-btn">
-                    <a  href="centralAjuda.html" style="color:white; font-weight: bold;">Central de Ajuda</a>
-                    <i class="bi bi-chat-dots-fill"></i>
-                </button>
-            </ul>
-
+    <a class="img-container"><img src="img/logo2.png" width="60px"></a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 grid gap-4">
+      <li class="nav-item">
+        <a class="nav-link active speech" style="font-weight: bold; font-family: sans-serif; "aria-current="page" href="index.html">Início</a> 
+      </li>
+      <li class="nav-item dropdown speech">
+        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastro Escolar</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Formulario_Escolar.pdf">Formulário Escolar</a></li>
+          <li><a class="dropdown-item" style="color:black" target="_blank" href="file:img/Atestado_de_Frequencia.pdf">Atestado de Frequência</a></li>
         </ul>
-    </div>
-</nav>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link speech"style=" font-family: sans-serif;" href="linhaHora.html">Linhas e Horários</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link speech"style="font-family: sans-serif;" target="_blank" href="img/videoTutorial.mp4">Tutorial da Plataforma</a>
+      </li>
+    </ul>
+    <br>
+    <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3">
+          <ul class="navbar-nav mb-2 mb-lg-0 grid gap-3 central">  
+            <button type="button" class="btn btn-outline-light position-relative speech" id="central"><a href="centralAjuda.html" >Central de Ajuda </a><i class="bi bi-chat-dots-fill"></i> </button>
+          </ul>
+        </ul>
+  </div>
 
-
-        <!--
-          https://getbootstrap.com/docs/4.0/components/dropdowns/? SITE PARA FAZER O LOGIN OU CADASTRO
-      -->
-
-
-
-      <div class="container myContainer" id="conteudo2" >
+      <div class="container myContainer" >
         <h2 class="display-4 speech" style="color:orange"><i class="bi bi-person-lines-fill"></i> Central de Ajuda</h2>
         <h4 class="text-center" style="color:orange; font-family: Pickwick">Fale conosco!</h4>
 
@@ -371,92 +380,6 @@
 });
 
 
-  const modoSwitch = document.getElementById("modoSwitch");
-  const conteudo = document.getElementById("conteudo");
-
-  modoSwitch.addEventListener("change", () => {
-      if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo.style.backgroundColor = "black";
-                conteudo.style.color = "orange";
-            } else {
-                // Modo Claro
-                conteudo.style.backgroundColor = "white";
-                conteudo.style.color = "black";
-            }
-        });
-
-      const modoSwitch3 = document.getElementById("modoSwitch");
-      const conteudo2 = document.getElementById("conteudo2");
-
-     modoSwitch3.addEventListener("change", () => {
-      if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo2.style.backgroundColor = "black";
-                conteudo2.style.color = "orange";
-            } else {
-                // Modo Claro
-                conteudo2.style.backgroundColor = "white";
-                conteudo2.style.color = "black";
-            }
-        });
-
-            const modoSwitch4 = document.getElementById("modoSwitch");
-            const conteudo3 = document.getElementById("conteudo3");
-
-            modoSwitch3.addEventListener("change", () => {
-              if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo3.style.backgroundColor = "black";
-                conteudo3.style.color = "orange";
-              } else {
-                // Modo Claro
-                conteudo3.style.backgroundColor = "white";
-                conteudo3.style.color = "black";
-              }
-            });
-            const modoSwitch5 = document.getElementById("modoSwitch");
-            const conteudo4 = document.getElementById("conteudo4");
-
-            modoSwitch4.addEventListener("change", () => {
-              if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo4.style.backgroundColor = "black";
-                conteudo4.style.color = "orange";
-              } else {
-                // Modo Claro
-                conteudo4.style.backgroundColor = "white";
-                conteudo4.style.color = "black";
-              }
-            });
-            const modoSwitch6 = document.getElementById("modoSwitch");
-            const conteudo5 = document.getElementById("conteudo5");
-
-            modoSwitch5.addEventListener("change", () => {
-              if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo5.style.backgroundColor = "black";
-                conteudo5.style.color = "orange";
-              } else {
-                // Modo Claro
-                conteudo5.style.backgroundColor = "white";
-                conteudo5.style.color = "black";
-              }
-            });
-            const modoSwitch7 = document.getElementById("modoSwitch");
-            const conteudo6 = document.getElementById("conteudo6");
-
-            modoSwitch6.addEventListener("change", () => {
-              if (modoSwitch.checked) {
-                // Modo Escuro
-                conteudo6.style.backgroundColor = "black";
-                conteudo6.style.color = "orange";
-              } else {
-                // Modo Claro
-                conteudo6.style.backgroundColor = "white";
-                conteudo6.style.color = "black";
-              }
-            });
     </script>
 
 </body>
