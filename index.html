@@ -597,6 +597,7 @@
     .dark-mode #dark-paragraph {
       background: linear-gradient(130deg, #191919,black);
       color: white;
+      box-shadow: 5px 5px 5px orange;
     }
     .dark-mode #dark-download {
       background: linear-gradient(130deg, #191919,black);
@@ -661,7 +662,7 @@
             <a id="dark-nav" class="nav-link active speech" style="color:orange; font-weight: bold; font-family: sans-serif; "aria-current="page" href="index.html">Início</a> 
           </li>
           <li class="nav-item dropdown"> <!-- Adicionando a classe 'dropdown' aqui -->
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
               Cadastro Escolar
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -729,16 +730,16 @@
         </section>
   </div>
 
-  <div class="containerApp" id="conteudo" style="background-color: white; color: orange; opacity: 0.9;">
+  <div class="containerApp" id="dark-download" style="background-color: white; color: orange; opacity: 0.9;">
     <div class="row" id="app-info">         
-            <div id="dark-download" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-top: 15px">
-              <img id="trocaImg" src="img/gpmaps.jpg" alt="SplashScreen Mobile" class="img-fluid" width="50%" style="padding-left:100px ;">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-top: 25px">
+              <img id="trocaImg" src="img/gpmapsDark.png" alt="SplashScreen Mobile" class="img-fluid" width="50%" style="padding-left:100px ;">
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-              <h6 id="dark-download" class="text-center" style="padding-top: 15px;">Baixe no seu smartphone gratuitamente!</h6><br><br>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+              <h6  class="text-center" style="padding-top: 15px;">Baixe no seu smartphone gratuitamente!</h6><br><br>
 
-              <div class="imagem-repetida">
+              <div class="imagem-repetida" >
                 <img src="img/frameApple.png" alt="Imagem" >
 
                   <button data-text="Awesome" class="gpbusBtn">
@@ -748,8 +749,9 @@
 
                 <img src="img/frameGoogle.png" alt="Imagem">
               </div>
-              <div align="center">
+              <div align="center" >
                 <a href="https://www.apple.com/br/search/gpbus?src=globalnav" target="_blank">
+                  <br>
                   <button class="download btn2 btn2-white btn2-animate">
                     <img src="img/AppStore.png" width="150px">
                   </button>
@@ -861,6 +863,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
+
     /*LEITURA VOZ ALTA*/
     const elementsWithSpeech = document.querySelectorAll(".speech");
     function speakText(text) {
@@ -912,7 +915,6 @@
         }
       });
 
-        
   </script>
 </body>
 </html>
