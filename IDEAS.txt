@@ -1,0 +1,14 @@
+SITE PARA ICONES/IMAGENS PNG
+https://pngtree.com/so/gamification
+
+ANIMAÇÃO DE UM DINHEIRO VOANDO COMO SE FOSSE BOTAO
+<span class="side-affiliate-entrance-icon"><img src="//js.pngtree.com/web3/images/affiliate/entrance-img.png" class="animated-swing">
+<img src="//js.pngtree.com/web3/images/affiliate/entrance-img.png" class="animated-swing">
+</span>
+
+LINK HORÁRIO ÔNIBUS SUMARÉ
+https://www.ouroverde.com.br/linhas-e-horarios/
+
+ANIMAÇÃO IMAGEM:
+http://www.codigoti.com.br/2018/10/css-hover-efeitos-de-transicoes-ao.html
+https://geracaocriativa.com/conteudos/desenvolvimento/codigo/36-17-animacoes-css-a-nao-perder-1parte

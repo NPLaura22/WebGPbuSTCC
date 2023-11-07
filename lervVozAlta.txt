@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitura em Voz Alta</title>
+  <link rel="stylesheet">
+</head>
+<body>
+  <h1>Leitura em Voz Alta</h1>
+  <p>Passe o mouse sobre o texto para ouvir em voz alta:</p>
+  <p class="speech">Este é um exemplo de texto que será lido em voz alta.</p>
+  <img src="img/fotoLaura.png" alt="Imagem Exemplo" class="speech">
+  
+  <script type="text/javascript">
+    const elementsWithSpeech = document.querySelectorAll(".speech");
+
+function speakText(text) {
+  const speechSynthesis = window.speechSynthesis;
+
+  if (speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+  }
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  speechSynthesis.speak(utterance);
+}
+
+elementsWithSpeech.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    const text = element.textContent;
+    speakText(text);
+  });
+});
+
+
+  </script>
+  <style type="text/css">
+    <style type="text/css">
+    body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.speech {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+  </style>
+  </style>
+</body>
+</html>
